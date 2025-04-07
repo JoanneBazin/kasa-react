@@ -9,17 +9,42 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+}
+
 a {
   text-decoration: inherit;
   color: #000000;
 }
 
-body {
-  margin: 0;
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
   min-width: 320px;
   min-height: 100vh;
+
+  @media (max-width: 765px) {
+    gap: 27px;
+  }
 }
 
 li {
   list-style: none;
+}
+
+main {
+  margin: 0 100px;
+  flex: 1;
+
+  @media (max-width: 1024px) {
+    margin: 0 70px;
+  }
+  @media (max-width: 765px) {
+    margin: 0 40px;
+  }
 }
