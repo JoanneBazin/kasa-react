@@ -1,0 +1,57 @@
+@mixin banner-bg($opacity) {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, $opacity);
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+
+.banner {
+  width: 100%;
+  height: 223px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  @media (max-width: 765px) {
+    height: 111px;
+  }
+
+  &.banner-light::before {
+    @include banner-bg(0.3);
+  }
+  &.banner-dark::before {
+    @include banner-bg(0.6);
+  }
+
+  .banner-title {
+    font-weight: 700;
+    font-size: 48px;
+    margin: 0 16px;
+    z-index: 10;
+    color: #ffffff;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    display: inline-block;
+
+    @media (max-width: 765px) {
+      font-size: 24px;
+    }
+
+    .stroke {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: transparent;
+      -webkit-text-stroke: 1.5px #000000;
+      z-index: -1;
+    }
+  }
+}

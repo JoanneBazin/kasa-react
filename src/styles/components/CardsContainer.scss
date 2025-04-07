@@ -1,0 +1,30 @@
+.cards-container {
+  width: 100%;
+  margin: 50px 0;
+  padding: 50px;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 50px;
+  column-gap: 10px;
+  justify-content: space-around;
+
+  @media (max-width: 1340px) {
+    gap: 50px;
+  }
+  @media (max-width: 765px) {
+    gap: 22px;
+    margin: 22px 0;
+    padding: 0;
+    background-color: #ffffff;
+  }
+
+  .fetch-error {
+    text-align: center;
+    font-size: 20px;
+    font-style: italic;
+  }
+}

@@ -6,11 +6,13 @@ import { BrowserRouter } from "react-router";
 const App = () => {
   return (
     <BrowserRouter>
-      <Header />
-      <main>
-        <AppRouter />
-      </main>
-      <Footer />
+      <div className="app">
+        <Header />
+        <main>
+          <AppRouter />
+        </main>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 };
