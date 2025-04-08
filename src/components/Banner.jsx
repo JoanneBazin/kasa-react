@@ -2,7 +2,7 @@ import "../styles/components/Banner.scss";
 
 const Banner = ({ img, title, variant }) => {
   return (
-    <div
+    <section
       className={`banner ${
         variant === "light" ? "banner-light" : "banner-dark"
       }`}
@@ -14,7 +14,7 @@ const Banner = ({ img, title, variant }) => {
           {title}
         </p>
       )}
-    </div>
+    </section>
   );
 };
 
