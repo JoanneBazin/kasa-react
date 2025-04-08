@@ -2,8 +2,6 @@ import { Link } from "react-router";
 import "../styles/components/Card.scss";
 
 const Card = ({ data }) => {
-  console.log(data);
-
   return (
     <Link to={`/accommodation/${data.id}`} className="card">
       <figure key={data.id}>
