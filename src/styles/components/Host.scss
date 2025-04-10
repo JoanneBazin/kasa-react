@@ -1,0 +1,11 @@
+.host-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  span {
+    color: #ff6060;
+    font-size: 18px;
+    line-height: 143%;
+  }
+}

@@ -3,7 +3,7 @@ import "../styles/components/Card.scss";
 
 const Card = ({ data }) => {
   return (
-    <Link to={`/accommodation/${data.id}`} className="card">
+    <Link to={`/lodging/${data.id}`} state={{ lodging: data }} className="card">
       <figure key={data.id}>
         <img src={data.cover} alt={data.title} className="card-img" />
         <figcaption>

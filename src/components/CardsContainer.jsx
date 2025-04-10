@@ -1,9 +1,9 @@
-import useFetchAccommodations from "../hooks/useFetchAccommodations";
+import useFetchLodging from "../hooks/useFetchLodging";
 import Card from "./Card";
 import "../styles/components/CardsContainer.scss";
 
 const CardsContainer = () => {
-  const { data, loading, error } = useFetchAccommodations();
+  const { data, loading, error } = useFetchLodging();
 
   return (
     <section className="cards-container">

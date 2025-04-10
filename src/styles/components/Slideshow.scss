@@ -1,0 +1,40 @@
+.slideshow-container {
+  height: 415px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 25px;
+  position: relative;
+  background: #f6f6f673;
+
+  .slideshow-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .slideshow-nav-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY((-50%));
+
+    &.prev {
+      left: 23px;
+    }
+    &.next {
+      right: 23px;
+    }
+  }
+
+  .slideshow-counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: #ffffff;
+  }
+}

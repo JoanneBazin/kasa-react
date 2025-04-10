@@ -1,0 +1,51 @@
+.lodging-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  .lodging-info {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    gap: 20px;
+    grid-template-areas:
+      "left right"
+      "bottom bottom";
+  }
+
+  .info-left {
+    grid-area: left;
+
+    .title {
+      font-size: 36px;
+      font-weight: 500;
+      color: #ff6060;
+      margin: 5px 0;
+    }
+
+    .place {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .info-tags {
+      display: flex;
+      gap: 10px;
+      padding: 0;
+      margin-top: 20px 0;
+    }
+  }
+  .info-right {
+    grid-area: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    text-align: right;
+    margin-bottom: 16px;
+  }
+  .info-bottom {
+    grid-area: bottom;
+    display: flex;
+    gap: 76px;
+  }
+}

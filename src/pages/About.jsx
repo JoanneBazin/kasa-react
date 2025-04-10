@@ -32,7 +32,14 @@ const About = () => {
       <Banner img={imgBanner} />
       <section className="collapse-container">
         {aboutItems.map((item, index) => {
-          return <Collapse key={index} item={item} />;
+          return (
+            <Collapse
+              key={index}
+              title={item.title}
+              content={item.content}
+              size="large"
+            />
+          );
         })}
       </section>
     </>
