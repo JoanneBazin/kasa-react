@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 
-const useFetchAccommodations = () => {
+const useFetchLodging = (id = null) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    if (id === "none") {
+      setLoading(false);
+      return;
+    }
     const fetchData = async () => {
       try {
         const response = await fetch(
@@ -18,7 +22,14 @@ const useFetchAccommodations = () => {
         }
         const result = await response.json();
 
-        setData(result);
+        if (id) {
+          const item = result.find((el) => el.id === id);
+          if (item) {
+            setData(item);
+          } else setError("Pas de logement correspondant");
+        } else {
+          setData(result);
+        }
       } catch (error) {
         setError(error.message);
       } finally {
@@ -27,8 +38,9 @@ const useFetchAccommodations = () => {
     };
 
     fetchData();
-  }, []);
+  }, [id]);
+
   return { data, loading, error };
 };
 
-export default useFetchAccommodations;
+export default useFetchLodging;
