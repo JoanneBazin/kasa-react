@@ -1,4 +1,11 @@
 .rating {
   display: flex;
-  gap: 5px;
+}
+
+.star-rating {
+  width: 36px;
+  height: auto;
+  @media (max-width: 450px) {
+    width: 18px;
+  }
 }

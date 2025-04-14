@@ -4,7 +4,7 @@
   overflow: hidden;
   border-radius: 25px;
   position: relative;
-  background: #f6f6f673;
+  background: $light-gray;
 
   .slideshow-img {
     width: 100%;
@@ -35,6 +35,6 @@
     left: 50%;
     transform: translateX(-50%);
     font-size: 18px;
-    color: #ffffff;
+    color: $white;
   }
 }

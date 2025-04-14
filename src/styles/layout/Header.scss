@@ -8,16 +8,6 @@
     padding: 20px 40px 0 40px;
   }
 
-  img {
-    width: 210px;
-    height: 68px;
-
-    @media (max-width: 765px) {
-      width: 145px;
-      height: 47px;
-    }
-  }
-
   .navbar {
     display: flex;
     gap: 57px;

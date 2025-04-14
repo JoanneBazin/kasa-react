@@ -18,7 +18,7 @@ body,
 
 a {
   text-decoration: inherit;
-  color: #000000;
+  color: $black;
 }
 
 .app {
@@ -33,8 +33,34 @@ a {
   }
 }
 
+h1 {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: $line-h;
+  margin: 0;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: $bold;
+  margin: 0;
+}
+
+p,
+span {
+  font-size: 18px;
+  line-height: $line-h;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
 li {
   list-style: none;
+  line-height: $line-h;
 }
 
 main {
