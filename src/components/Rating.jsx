@@ -1,4 +1,5 @@
 import StarRating from "./StarRating";
+import "../styles/components/Rating.scss";
 
 const Rating = ({ rating }) => {
   const stars = Array.from({ length: 5 }, (_, index) => index + 1);

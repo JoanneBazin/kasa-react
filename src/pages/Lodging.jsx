@@ -7,6 +7,7 @@ import Tag from "../components/Tag";
 import Host from "../components/Host";
 import Rating from "../components/Rating";
 import Collapse from "../components/Collapse";
+import { useEffect } from "react";
 
 const Lodging = () => {
   const { id } = useParams();
@@ -17,17 +18,15 @@ const Lodging = () => {
 
   const lodging = lodgingLink || data;
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-  if (error) {
+  useEffect(() => {
     if (error === "Pas de logement correspondant") {
       navigate("/error");
-      return;
-    } else {
-      return <div>Problème lors du chargement !</div>;
     }
-  }
+  }, [error, navigate]);
+
+  if (loading) return <div>Loading...</div>;
+  if (error === "Pas de logement correspondant") return null;
+  if (error) return <div>Problème lors du chargement !</div>;
 
   const {
     title,
@@ -45,7 +44,7 @@ const Lodging = () => {
       <Slideshow images={pictures} />
       <section className="lodging-info">
         <div className="info-left">
-          <h2 className="title">{title}</h2>
+          <h1 className="title">{title}</h1>
           <p className="place">{place}</p>
           <ul className="info-tags">
             {tags.map((tag, index) => (

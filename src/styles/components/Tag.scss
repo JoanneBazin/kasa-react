@@ -1,11 +1,18 @@
 .tag {
   min-width: 115px;
   border-radius: 10px;
-  padding: 5px 10px;
+  padding: 3px 15px;
 
-  background: #ff6060;
-  color: #ffffff;
+  background: $primary-color;
+  color: $white;
   font-size: 14px;
-  font-weight: 700;
+  line-height: $line-h;
+  font-weight: $bold;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 10px;
+    min-width: 0;
+    padding: 3px 8px;
+  }
 }
