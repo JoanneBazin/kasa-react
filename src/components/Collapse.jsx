@@ -21,13 +21,13 @@ const Collapse = ({ title, content, size, list = false }) => {
           {list ? (
             <ul>
               {content.map((item, index) => (
-                <li key={index} className="collapse-list-item">
+                <li key={index} className="fs-text-sm">
                   {item}
                 </li>
               ))}
             </ul>
           ) : (
-            <p>{content}</p>
+            <p className="fs-text-sm">{content}</p>
           )}
         </div>
       )}

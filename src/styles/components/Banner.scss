@@ -21,7 +21,7 @@
   align-items: center;
   position: relative;
 
-  @media (max-width: 765px) {
+  @media (max-width: 768px) {
     height: 111px;
   }
 
@@ -33,8 +33,6 @@
   }
 
   .banner-title {
-    font-weight: 700;
-    font-size: 48px;
     margin: 0 16px;
     z-index: 10;
     color: $white;
@@ -42,9 +40,7 @@
     position: relative;
     display: inline-block;
 
-    @media (max-width: 765px) {
-      font-size: 24px;
-    }
+    @include font-responsive(48px, 24px, $font-bold);
 
     .stroke {
       position: absolute;

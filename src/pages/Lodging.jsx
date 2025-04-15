@@ -45,7 +45,7 @@ const Lodging = () => {
       <section className="lodging-info">
         <div className="info-left">
           <h1 className="title">{title}</h1>
-          <p className="place">{place}</p>
+          <p className="fs-text-md">{place}</p>
           <ul className="info-tags">
             {tags.map((tag, index) => (
               <Tag key={index} title={tag} />

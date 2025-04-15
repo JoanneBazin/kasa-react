@@ -1,18 +1,12 @@
 @mixin collapse-small {
-  @media (max-width: 768px) {
+  @include respond-to("sm") {
     width: 100%;
     .collapse-title {
       height: 30px;
       padding: 10px 6px 10px 10px;
 
       h2 {
-        font-size: 13px;
-      }
-    }
-    .collapse-content {
-      li,
-      p {
-        font-size: 12px;
+        font-size: $font-md-m;
       }
     }
   }
@@ -27,6 +21,10 @@
 
     .collapse-title {
       padding: 10px 15px;
+
+      h2 {
+        font-size: $font-lg;
+      }
     }
     @include collapse-small;
   }
@@ -36,10 +34,6 @@
     .collapse-title {
       border-radius: 10px;
       padding: 10px 20px 10px 10px;
-
-      h2 {
-        font-size: 18px;
-      }
     }
     @include collapse-small;
   }
@@ -52,7 +46,6 @@
     justify-content: space-between;
     background: $primary-color;
     border-radius: 5px;
-    color: $white;
 
     .collapse-button {
       background: inherit;
@@ -76,14 +69,9 @@
   .collapse-content {
     background: $light-gray;
     padding: 20px;
-    font-weight: 400;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
-
-    li {
-      font-size: 18px;
-    }
   }
 }
