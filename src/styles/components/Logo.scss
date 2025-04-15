@@ -1,13 +1,9 @@
 .logo {
-  height: auto;
-
   &--large {
-    width: 211px;
-    @media (max-width: 768px) {
-      width: 145px;
-    }
+    @include size-responsive(211px, 145px);
   }
   &--medium {
     width: 122px;
+    height: auto;
   }
 }

@@ -27,6 +27,18 @@ body,
   }
 }
 
+main {
+  margin: 0 100px;
+  flex: 1;
+
+  @include respond-to("lg") {
+    margin: 0 70px;
+  }
+  @include respond-to("sm") {
+    margin: 0 40px;
+  }
+}
+
 h1 {
   margin: 0;
   @include font-responsive($font-xl, $font-xl-m, $font-base);
@@ -57,16 +69,11 @@ a {
   color: $black;
 }
 
-main {
-  margin: 0 100px;
-  flex: 1;
-
-  @include respond-to("lg") {
-    margin: 0 70px;
-  }
-  @include respond-to("sm") {
-    margin: 0 40px;
-  }
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
 }
 
 .fs-layout-content {

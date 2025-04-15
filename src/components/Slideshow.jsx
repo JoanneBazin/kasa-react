@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "../styles/components/Slideshow.scss";
-import prevArrow from "../assets/icons/prev-arrow-slide.svg";
-import nextArrow from "../assets/icons/next-arrow-slide.svg";
+import SlideArrow from "./icons/SlideArrow";
 
 const Slideshow = ({ images }) => {
   const [activeSlide, setActiveSlide] = useState(images[0]);
@@ -31,10 +30,10 @@ const Slideshow = ({ images }) => {
       {images?.length > 1 && (
         <>
           <button className="slideshow-nav-btn prev" onClick={handlePrevImg}>
-            <img src={prevArrow} alt="Photo précédente" />
+            <SlideArrow direction="left" />
           </button>
           <button className="slideshow-nav-btn next" onClick={handleNextImg}>
-            <img src={nextArrow} alt="Photo suivante" />
+            <SlideArrow direction="right" />
           </button>
           <span className="slideshow-counter">
             {imgIndex + 1}/{imgCount}

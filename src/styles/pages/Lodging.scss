@@ -25,8 +25,8 @@
 
     .title {
       color: $primary-color;
-      @media (max-width: 768px) {
-        font-size: 18px;
+      @include respond-to("sm") {
+        margin-bottom: 10px;
       }
     }
 
@@ -35,6 +35,9 @@
       gap: 10px;
       padding: 0;
       margin: 20px 0;
+      @include respond-to("sm") {
+        margin: 10px 0;
+      }
     }
   }
   .info-right {
@@ -46,10 +49,13 @@
     text-align: right;
     margin-bottom: 20px;
 
-    @media (max-width: 855px) {
+    @include respond-to("md") {
       flex-direction: row-reverse;
       align-items: center;
       justify-content: space-between;
+    }
+    @include respond-to("sm") {
+      margin-bottom: 10px;
     }
   }
   .info-bottom {

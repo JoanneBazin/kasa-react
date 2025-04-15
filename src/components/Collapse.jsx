@@ -1,6 +1,6 @@
 import { useState } from "react";
-import openIcon from "../assets/icons/arrow_open.svg";
 import "../styles/components/Collapse.scss";
+import CollapseArrow from "./icons/CollapseArrow";
 
 const Collapse = ({ title, content, size, list = false }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,24 +13,23 @@ const Collapse = ({ title, content, size, list = false }) => {
           onClick={() => setIsOpen(!isOpen)}
           className={`collapse-button ${isOpen ? "closing" : ""}`}
         >
-          <img src={openIcon} alt="Ouvrir et fermer l'onglet" />
+          <CollapseArrow />
         </button>
       </div>
-      {isOpen && (
-        <div className="collapse-content">
-          {list ? (
-            <ul>
-              {content.map((item, index) => (
-                <li key={index} className="fs-text-sm">
-                  {item}
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="fs-text-sm">{content}</p>
-          )}
-        </div>
-      )}
+
+      <div className={`collapse-content ${isOpen ? "open" : "closed"}`}>
+        {list ? (
+          <ul>
+            {content.map((item, index) => (
+              <li key={index} className="fs-text-sm">
+                {item}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="fs-text-sm">{content}</p>
+        )}
+      </div>
     </div>
   );
 };
