@@ -10,10 +10,8 @@
       "bottom";
   }
 
-  span {
+  .fs-text-sm {
     color: $primary-color;
-    @media (max-width: 450px) {
-      font-size: 12px;
-    }
+    font-weight: $font-base;
   }
 }

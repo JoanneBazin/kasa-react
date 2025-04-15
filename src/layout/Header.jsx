@@ -8,7 +8,7 @@ const Header = () => {
       <Logo />
       <nav>
         <ul className="navbar">
-          <li>
+          <li className="fs-layout-content">
             <NavLink
               to="/"
               className={({ isActive }) => (isActive ? "active" : "")}
@@ -16,7 +16,7 @@ const Header = () => {
               Accueil
             </NavLink>
           </li>
-          <li>
+          <li className="fs-layout-content">
             <NavLink
               to="/about"
               className={({ isActive }) => (isActive ? "active" : "")}

@@ -8,7 +8,7 @@ const Error = () => {
       <p className="error-message">
         Oups! La page que vous demandez n'existe pas.
       </p>
-      <Link className="error-redirection" to="/">
+      <Link className="error-redirection fs-text-md" to="/">
         Retourner sur la page d'accueil
       </Link>
     </section>

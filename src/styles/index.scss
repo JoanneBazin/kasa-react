@@ -2,7 +2,6 @@
 
 :root {
   font-family: "Montserrat", sans-serif;
-  font-weight: 500;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -16,11 +15,6 @@ body,
   height: 100%;
 }
 
-a {
-  text-decoration: inherit;
-  color: $black;
-}
-
 .app {
   display: flex;
   flex-direction: column;
@@ -28,28 +22,24 @@ a {
   min-width: 320px;
   min-height: 100vh;
 
-  @media (max-width: 765px) {
+  @include respond-to("sm") {
     gap: 27px;
   }
 }
 
 h1 {
-  font-size: 36px;
-  font-weight: 500;
-  line-height: $line-h;
   margin: 0;
+  @include font-responsive($font-xl, $font-xl-m, $font-base);
 }
 
 h2 {
-  font-size: 24px;
-  font-weight: $bold;
+  font-size: $font-md;
+  font-weight: $font-bold;
   margin: 0;
+  color: $white;
 }
 
-p,
-span {
-  font-size: 18px;
-  line-height: $line-h;
+p {
   margin: 0;
 }
 
@@ -60,17 +50,33 @@ ul {
 
 li {
   list-style: none;
-  line-height: $line-h;
+}
+
+a {
+  text-decoration: inherit;
+  color: $black;
 }
 
 main {
   margin: 0 100px;
   flex: 1;
 
-  @media (max-width: 1024px) {
+  @include respond-to("lg") {
     margin: 0 70px;
   }
-  @media (max-width: 765px) {
+  @include respond-to("sm") {
     margin: 0 40px;
   }
+}
+
+.fs-layout-content {
+  @include font-responsive($font-lg, $font-sm-m);
+}
+
+.fs-text-sm {
+  @include font-responsive($font-md, $font-sm-m, $font-light);
+}
+
+.fs-text-md {
+  @include font-responsive($font-md, $font-lg-m);
 }

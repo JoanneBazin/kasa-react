@@ -8,9 +8,9 @@ const Host = ({ host }) => {
   return (
     <div className="host-container">
       <div>
-        <span>{nameParts[0]}</span>
+        <span className="fs-text-sm">{nameParts[0]}</span>
         <br />
-        <span>{nameParts[1]}</span>
+        <span className="fs-text-sm">{nameParts[1]}</span>
       </div>
       <Avatar img={picture} />
     </div>

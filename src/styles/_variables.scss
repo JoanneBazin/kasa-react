@@ -1,7 +1,31 @@
+// Colors
 $primary-color: #ff6060;
 $light-gray: #f6f6f6;
 $white: #ffffff;
 $black: #000000;
 
-$bold: 700;
-$line-h: 143%;
+// Typography
+$font-sm: 14px;
+$font-md: 18px;
+$font-lg: 24px;
+$font-xl: 36px;
+
+$font-xs-m: 10px;
+$font-sm-m: 12px;
+$font-md-m: 13px;
+$font-lg-m: 14px;
+$font-xl-m: 18px;
+
+$font-bold: 700;
+$font-base: 500;
+$font-light: 400;
+$line-height: 143%;
+
+// Breakpoints
+$breakpoints: (
+  "xs": 450px,
+  "sm": 768px,
+  "md": 855px,
+  "lg": 1024px,
+  "xl": 1340px,
+);

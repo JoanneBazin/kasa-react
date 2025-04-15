@@ -5,13 +5,11 @@
 
   background: $primary-color;
   color: $white;
-  font-size: 14px;
-  line-height: $line-h;
-  font-weight: $bold;
   text-align: center;
 
-  @media (max-width: 768px) {
-    font-size: 10px;
+  @include font-responsive($font-sm, $font-xs-m, $font-bold);
+
+  @include respond-to("sm") {
     min-width: 0;
     padding: 3px 8px;
   }

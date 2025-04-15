@@ -1,0 +1,16 @@
+@import "./variables";
+
+@mixin respond-to($breakpoint) {
+  @media (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin font-responsive($font-size, $font-size-m, $weight: 500, $lh: 1.43) {
+  font-size: $font-size;
+  font-weight: $weight;
+  line-height: $lh;
+  @include respond-to("sm") {
+    font-size: $font-size-m;
+  }
+}
