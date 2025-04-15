@@ -14,3 +14,11 @@
     font-size: $font-size-m;
   }
 }
+
+@mixin size-responsive($width, $width-m) {
+  width: $width;
+  height: auto;
+  @include respond-to("sm") {
+    width: $width-m;
+  }
+}

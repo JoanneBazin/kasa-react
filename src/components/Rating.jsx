@@ -1,4 +1,4 @@
-import StarRating from "./StarRating";
+import StarRating from "./icons/StarRating";
 import "../styles/components/Rating.scss";
 
 const Rating = ({ rating }) => {
