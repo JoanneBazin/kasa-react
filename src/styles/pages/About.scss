@@ -1,12 +1,4 @@
 .collapse-container {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding: 0 108px;
-  margin-top: 40px;
-
-  @media (max-width: 768px) {
-    padding: 0;
-    gap: 19px;
-  }
+  @include flex-column(30px, $spacing-sm);
+  @include padding-responsive(0 108px, 0 $spacing-xl, 0);
 }

@@ -15,16 +15,10 @@
     padding: 50px 30px;
     column-gap: 20px;
   }
-  @media (max-width: 768px) {
+  @include respond-to("sm") {
     gap: 22px;
     margin: 22px 0;
     padding: 0;
     background-color: $white;
-  }
-
-  .fetch-error {
-    text-align: center;
-    font-size: 20px;
-    font-style: italic;
   }
 }

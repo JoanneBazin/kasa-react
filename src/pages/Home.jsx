@@ -1,14 +1,25 @@
+import useFetchLodging from "../hooks/useFetchLodging";
 import Banner from "../components/Banner";
 import imgbanner from "../assets/images/img-home.png";
-import "../styles/pages/Home.scss";
-import CardsContainer from "../components/CardsContainer";
+import CardsContainer from "../layout/CardsContainer";
 
 const Home = () => {
+  const { data, loading, error } = useFetchLodging();
+
   return (
     <>
       <Banner img={imgbanner} title="Chez vous, partout et ailleurs" />
 
-      <CardsContainer />
+      {loading ? (
+        <div className="fetch-loading">Loading...</div>
+      ) : error ? (
+        <div className="fetch-error">
+          Erreur lors de la récupération des logements. Veuillez réessayer
+          ultérieurement.
+        </div>
+      ) : (
+        <CardsContainer data={data} />
+      )}
     </>
   );
 };

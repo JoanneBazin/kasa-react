@@ -16,27 +16,20 @@ body,
 }
 
 .app {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
   min-width: 320px;
   min-height: 100vh;
 
-  @include respond-to("sm") {
-    gap: 27px;
-  }
+  @include flex-column;
 }
 
 main {
-  margin: 0 100px;
   flex: 1;
 
-  @include respond-to("lg") {
-    margin: 0 70px;
-  }
-  @include respond-to("sm") {
-    margin: 0 40px;
-  }
+  @include margin-responsive(
+    $spacing-lg $spacing-xxl,
+    35px $spacing-xl,
+    27px $spacing-md
+  );
 }
 
 h1 {

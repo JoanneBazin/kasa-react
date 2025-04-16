@@ -1,8 +1,7 @@
 .host-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  @media (max-width: 450px) {
+  @include flex-center(10px);
+
+  @include respond-to("xs") {
     grid-template-columns: 1fr;
     grid-template-areas:
       "left"

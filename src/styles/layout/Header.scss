@@ -1,23 +1,18 @@
 .header {
-  display: flex;
+  @include flex-center;
   justify-content: space-between;
-  align-items: center;
-  padding: 45px 100px 0 100px;
 
-  @media (max-width: 768px) {
-    padding: 20px 40px 0 40px;
-  }
+  @include padding-responsive(
+    45px $spacing-xxl 0 $spacing-xxl,
+    $spacing-md $spacing-xl 0 $spacing-xl,
+    $spacing-sm $spacing-md 0 $spacing-md
+  );
 
   .navbar {
-    display: flex;
-    gap: 57px;
+    @include flex-center(57px, $spacing-sm);
 
     margin: 0;
     padding-inline-start: 0;
-
-    @media (max-width: 768px) {
-      gap: 20px;
-    }
   }
 
   & .active {

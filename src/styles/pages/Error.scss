@@ -1,14 +1,8 @@
 .error-container {
+  @include flex-column(110px, 100px);
   height: 60vh;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 110px;
-
-  @media (max-width: 768px) {
-    gap: 100px;
-  }
 
   .error-title {
     color: $primary-color;
