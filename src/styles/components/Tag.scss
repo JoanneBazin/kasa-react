@@ -1,16 +1,15 @@
 .tag {
   min-width: 115px;
   border-radius: 10px;
-  padding: 3px 15px;
 
   background: $primary-color;
   color: $white;
   text-align: center;
 
   @include font-responsive($font-sm, $font-xs-m, $font-bold);
+  @include padding-responsive(3px 15px, 3px 10px, 3px 8px);
 
   @include respond-to("sm") {
     min-width: 0;
-    padding: 3px 8px;
   }
 }

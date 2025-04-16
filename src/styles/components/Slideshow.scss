@@ -1,6 +1,6 @@
 .slideshow-container {
+  @include flex-center;
   height: 415px;
-  display: flex;
   overflow: hidden;
   border-radius: 25px;
   position: relative;
@@ -39,7 +39,11 @@
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 18px;
+    font-size: $font-md;
     color: $white;
+
+    @include respond-to("xs") {
+      display: none;
+    }
   }
 }

@@ -22,3 +22,49 @@
     width: $width-m;
   }
 }
+
+@mixin padding-responsive($padding, $padding-lg, $padding-sm) {
+  padding: $padding;
+
+  @include respond-to("lg") {
+    padding: $padding-lg;
+  }
+  @include respond-to("sm") {
+    padding: $padding-sm;
+  }
+}
+@mixin margin-responsive($margin, $margin-lg, $margin-sm) {
+  margin: $margin;
+  @include respond-to("lg") {
+    margin: $margin-lg;
+  }
+  @include respond-to("sm") {
+    margin: $margin-sm;
+  }
+}
+
+@mixin flex-column($gap: null, $gap-m: null) {
+  display: flex;
+  flex-direction: column;
+  @if $gap {
+    gap: $gap;
+  }
+  @if $gap-m {
+    @include respond-to("sm") {
+      gap: $gap-m;
+    }
+  }
+}
+
+@mixin flex-center($gap: null, $gap-m: null) {
+  display: flex;
+  align-items: center;
+  @if $gap {
+    gap: $gap;
+  }
+  @if $gap-m {
+    @include respond-to("sm") {
+      gap: $gap-m;
+    }
+  }
+}

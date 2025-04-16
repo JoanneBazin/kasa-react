@@ -16,12 +16,12 @@
 
   background-size: cover;
   background-position: center;
-  display: flex;
+  @include flex-center;
   justify-content: center;
-  align-items: center;
+
   position: relative;
 
-  @media (max-width: 768px) {
+  @include respond-to("sm") {
     height: 111px;
   }
 
