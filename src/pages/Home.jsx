@@ -2,6 +2,8 @@ import useFetchLodging from "../hooks/useFetchLodging";
 import Banner from "../components/Banner";
 import imgbanner from "../assets/images/img-home.png";
 import CardsContainer from "../layout/CardsContainer";
+import Loader from "../components/Loader";
+import FetchError from "../components/FetchError";
 
 const Home = () => {
   const { data, loading, error } = useFetchLodging();
@@ -11,12 +13,9 @@ const Home = () => {
       <Banner img={imgbanner} title="Chez vous, partout et ailleurs" />
 
       {loading ? (
-        <div className="fetch-loading">Loading...</div>
+        <Loader />
       ) : error ? (
-        <div className="fetch-error">
-          Erreur lors de la récupération des logements. Veuillez réessayer
-          ultérieurement.
-        </div>
+        <FetchError error={error} />
       ) : (
         <CardsContainer data={data} />
       )}

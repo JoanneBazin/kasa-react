@@ -8,6 +8,8 @@ import Host from "../components/Host";
 import Rating from "../components/Rating";
 import Collapse from "../components/Collapse";
 import { useEffect } from "react";
+import Loader from "../components/Loader";
+import FetchError from "../components/FetchError";
 
 const Lodging = () => {
   const { id } = useParams();
@@ -24,9 +26,8 @@ const Lodging = () => {
     }
   }, [error, navigate]);
 
-  if (loading) return <div>Loading...</div>;
-  if (error === "Pas de logement correspondant") return null;
-  if (error) return <div>Problème lors du chargement !</div>;
+  if (loading) return <Loader />;
+  if (error) return <FetchError error={error} />;
 
   const {
     title,
