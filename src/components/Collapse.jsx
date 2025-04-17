@@ -12,6 +12,7 @@ const Collapse = ({ title, content, size, list = false }) => {
         <button
           onClick={() => setIsOpen(!isOpen)}
           className={`collapse-button ${isOpen ? "closing" : ""}`}
+          aria-label={isOpen ? "Fermer la section" : "Ouvrir la section"}
         >
           <CollapseArrow />
         </button>

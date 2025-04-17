@@ -6,6 +6,8 @@ const Logo = ({ size = "large", color = "#FF6060" }) => {
   return (
     <svg
       className={className}
+      role="img"
+      aria-label="Logo de Kasa"
       viewBox="0 0 211 68"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -54,10 +54,12 @@
   }
   .info-bottom {
     grid-area: bottom;
-    @include flex-center(5.28vh, $spacing-sm);
+    display: flex;
+    gap: 5.28vh;
 
     @include respond-to("sm") {
       flex-direction: column;
+      gap: $spacing-sm;
     }
   }
 }
