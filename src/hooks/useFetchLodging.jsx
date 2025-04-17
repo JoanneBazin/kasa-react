@@ -21,6 +21,9 @@ const useFetchLodging = (id = null) => {
           );
         }
         const result = await response.json();
+        if (!result || result.length === 0) {
+          setError("Aucun logement trouvé");
+        }
 
         if (id) {
           const item = result.find((el) => el.id === id);
@@ -31,7 +34,10 @@ const useFetchLodging = (id = null) => {
           setData(result);
         }
       } catch (error) {
-        setError(error.message);
+        setError(
+          "Une erreur est survenue lors de la récupération des données. Merci de réessayer ultérieurement"
+        );
+        console.log(error);
       } finally {
         setLoading(false);
       }
