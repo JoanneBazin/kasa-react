@@ -29,10 +29,18 @@ const Slideshow = ({ images }) => {
       )}
       {images?.length > 1 && (
         <>
-          <button className="slideshow-nav-btn prev" onClick={handlePrevImg}>
+          <button
+            className="slideshow-nav-btn prev"
+            onClick={handlePrevImg}
+            aria-label="Photo précédente"
+          >
             <SlideArrow direction="left" />
           </button>
-          <button className="slideshow-nav-btn next" onClick={handleNextImg}>
+          <button
+            className="slideshow-nav-btn next"
+            onClick={handleNextImg}
+            aria-label="Photo suivante"
+          >
             <SlideArrow direction="right" />
           </button>
           <span className="slideshow-counter">

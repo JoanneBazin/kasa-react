@@ -13,8 +13,7 @@
 }
 
 .collapse {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
 
   &.large {
     width: 100%;
