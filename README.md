@@ -1,3 +1,40 @@
+# Kasa
+
+SPA de location d'appartements entre particuliers.
+
+## Stack
+
+React (SPA)\
+React Router DOM (navigation)\
+Sass (styles)\
+Vite (bundler)\
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://link-to-project
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
