@@ -1,4 +1,4 @@
-.error-container {
+.fetch-error-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,5 +9,6 @@
     font-size: $font-md;
     font-style: italic;
     color: $primary-color;
+    @include font-responsive($font-md, $font-lg-m);
   }
 }

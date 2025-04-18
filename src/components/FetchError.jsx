@@ -2,7 +2,7 @@ import "../styles/components/FetchError.scss";
 
 const FetchError = ({ error }) => {
   return (
-    <div className="error-container">
+    <div className="fetch-error-container">
       <p className="fetch-error">{error}</p>
     </div>
   );
