@@ -13,6 +13,11 @@
     border-top: $primary-color 5px solid;
     border-right: $primary-color 5px solid;
     animation: spin 1s linear infinite;
+
+    @include respond-to("xs") {
+      height: 40px;
+      width: 40px;
+    }
   }
 }
 

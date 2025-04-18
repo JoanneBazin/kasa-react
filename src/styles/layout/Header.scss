@@ -5,7 +5,7 @@
   @include padding-responsive(
     45px $spacing-xxl 0 $spacing-xxl,
     $spacing-md $spacing-xl 0 $spacing-xl,
-    $spacing-sm $spacing-md 0 $spacing-md
+    $spacing-sm $spacing-sm 0 $spacing-sm
   );
 
   .navbar {

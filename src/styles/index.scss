@@ -28,7 +28,7 @@ main {
   @include margin-responsive(
     $spacing-lg $spacing-xxl,
     35px $spacing-xl,
-    27px $spacing-md
+    27px $spacing-sm
   );
 }
 
