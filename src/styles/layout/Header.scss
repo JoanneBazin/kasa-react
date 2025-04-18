@@ -9,10 +9,9 @@
   );
 
   .navbar {
-    @include flex-center(57px, $spacing-sm);
-
     margin: 0;
     padding-inline-start: 0;
+    @include flex-center(57px, $spacing-sm);
   }
 
   & .active {

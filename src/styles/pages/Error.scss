@@ -1,8 +1,8 @@
 .error-container {
-  @include flex-column(110px, 100px);
   height: 60vh;
   justify-content: center;
   align-items: center;
+  @include flex-column(110px, 100px);
 
   .error-title {
     color: $primary-color;

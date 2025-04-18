@@ -1,4 +1,9 @@
 .host-container {
+  .fs-text-sm {
+    color: $primary-color;
+    font-weight: $font-base;
+  }
+
   @include flex-center(10px);
 
   @include respond-to("xs") {
@@ -7,10 +12,5 @@
       "left"
       "right"
       "bottom";
-  }
-
-  .fs-text-sm {
-    color: $primary-color;
-    font-weight: $font-base;
   }
 }

@@ -29,9 +29,9 @@
     }
 
     .info-tags {
+      padding: 0;
       @include flex-center(10px);
       @include margin-responsive($spacing-sm 0, $spacing-sm 0, $spacing-xs 0);
-      padding: 0;
     }
   }
   .info-right {

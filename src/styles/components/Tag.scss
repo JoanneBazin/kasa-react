@@ -5,11 +5,12 @@
   background: $primary-color;
   color: $white;
   text-align: center;
+  padding: 3px 15px;
 
   @include font-responsive($font-sm, $font-xs-m, $font-bold);
-  @include padding-responsive(3px 15px, 3px 10px, 3px 8px);
 
   @include respond-to("sm") {
     min-width: 0;
+    padding: 3px 8px;
   }
 }

@@ -3,9 +3,10 @@
   aspect-ratio: 1/1;
   border-radius: 50%;
   overflow: hidden;
-  @include size-responsive(64px, 32px);
 
   img {
     width: 100%;
   }
+
+  @include size-responsive(64px, 32px);
 }
