@@ -68,7 +68,7 @@
     overflow: hidden;
     transform: scaleY(0);
     transform-origin: top;
-    transition: all 300ms ease-out;
+    transition: transform 300ms ease-out, opacity 200ms ease-out;
 
     &.open {
       transform: scaleY(1);
