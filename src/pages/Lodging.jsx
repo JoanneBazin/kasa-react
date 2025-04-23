@@ -12,7 +12,6 @@ import Loader from "../components/Loader";
 import FetchError from "../components/FetchError";
 
 const Lodging = () => {
-  console.log("Lodging monted");
   const { id } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
