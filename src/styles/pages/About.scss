@@ -1,6 +1,9 @@
 .collapse-container {
   padding: 0 108px;
   @include flex-column(30px, $spacing-sm);
+  @include respond-to("lg") {
+    padding: 0 50px;
+  }
   @include respond-to("sm") {
     padding: 0;
   }
