@@ -1,7 +1,7 @@
 import { useLocation, useNavigate, useParams } from "react-router";
 import "../styles/pages/Lodging.scss";
 
-import { useFetchLodging } from "../hooks/useFetchLodging";
+import { useFetchLodgingById } from "../hooks/useFetchLodgingById";
 import Slideshow from "../components/SlideShow";
 import Tag from "../components/Tag";
 import Host from "../components/Host";
@@ -12,19 +12,20 @@ import Loader from "../components/Loader";
 import FetchError from "../components/FetchError";
 
 const Lodging = () => {
+  console.log("Lodging monted");
   const { id } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
   const lodgingLink = location.state?.lodging || null;
-  const { data, loading, error } = useFetchLodging(lodgingLink ? "none" : id);
+  const { data, loading, error } = useFetchLodgingById(lodgingLink ? null : id);
 
   const lodging = lodgingLink || data;
 
   useEffect(() => {
-    if (error === "Pas de logement correspondant") {
+    if (!loading && error === "Pas de logement correspondant") {
       navigate("/error");
     }
-  }, [error, navigate]);
+  }, [loading, error, navigate]);
 
   if (loading) return <Loader />;
   if (error) return <FetchError error={error} />;
