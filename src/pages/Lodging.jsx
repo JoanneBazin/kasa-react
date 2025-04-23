@@ -1,7 +1,7 @@
 import { useLocation, useNavigate, useParams } from "react-router";
 import "../styles/pages/Lodging.scss";
 
-import useFetchLodging from "../hooks/useFetchLodging";
+import { useFetchLodging } from "../hooks/useFetchLodging";
 import Slideshow from "../components/SlideShow";
 import Tag from "../components/Tag";
 import Host from "../components/Host";
