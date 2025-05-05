@@ -68,12 +68,13 @@
     overflow: hidden;
     transform: scaleY(0);
     transform-origin: top;
-    transition: transform 300ms ease-out, opacity 200ms ease-out;
+    transition: transform 300ms ease-out, opacity 200ms ease-out 100ms,
+      max-height 300ms ease-out, padding 300ms ease-out;
 
     &.open {
       transform: scaleY(1);
       opacity: 1;
-      max-height: fit-content;
+      max-height: 200px;
       padding: 20px;
     }
   }
